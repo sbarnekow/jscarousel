@@ -1,0 +1,15 @@
+.carousel {
+  border: 8px solid black;
+  overflow: hidden;
+  width: 635px;
+  height: 420px;
+}
+
+.slider {
+  position: relative;
+  width: 3200px;
+}
+
+.slider img{
+  float: left;
+}

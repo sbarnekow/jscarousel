@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css"> 
+</header>
+<body>
+  <div>
+    <a id="butt" href="#">Next</a>
+  </div>
+  <div class="carousel">
+   <div id="slider">
+      <img src="img/pic1.jpg"> 
+      <img src="img/pic2.jpg"> 
+      <img src="img/pic3.jpg"> 
+      <img src="img/pic4.jpg">
+    </div>
+  </div>
+<script>
+var slide = document.getElementById('slider')
+var timer;
+
+slide.style.marginLeft = '0px';
+
+  function imSliding(){
+    slide.style.marginLeft = (parseInt(slide.style.marginLeft, 10) - 2.5) + 'px';
+  }
+
+  var clickIt = document.getElementById('butt')
+  clickIt.onclick = function(){ 
+    timer = setInterval(imSliding, 100)
+  }
+
+</script>
+
+</body>
