@@ -6,31 +6,55 @@
 </header>
 <body>
   <div>
-    <a id="butt" href="#">Next</a>
+    <a id="next" href="#">Next</a>
   </div>
   <div class="carousel">
    <div id="slider">
       <img src="img/pic1.jpg"> 
       <img src="img/pic2.jpg"> 
-      <img src="img/pic3.jpg"> 
+      <img src="img/pic3.jpg">
       <img src="img/pic4.jpg">
     </div>
   </div>
+  <div>
+    <a id="previous" href="#">Previous</a>
+  </div>
+
+<!-- i want to slide images through the carousel with the slider
+once the slider is completed i want to repeat that function
+i would like to set another function that scrolls backwards through the slider's images -->
+
 <script>
 var slide = document.getElementById('slider')
+var carousel = document.getElementById('carousel')
+
 var timer;
 
 slide.style.marginLeft = '0px';
+slide.style.marginRight = '0px';
 
-  function imSliding(){
-    slide.style.marginLeft = (parseInt(slide.style.marginLeft, 10) - 2.5) + 'px';
+  function slideNext(){
+      slide.style.marginLeft = (parseInt(slide.style.marginLeft, 10) - 2.5) + 'px';
   }
 
-  var clickIt = document.getElementById('butt')
-  clickIt.onclick = function(){ 
-    timer = setInterval(imSliding, 100)
+   //if the slide next function ends, it needs to restart  
+    // the slide function will end when the slider has completed the width of the carousel
+
+  function slidePrev(){
+    slide.style.marginRight = (parseInt(slide.style.marginRight, 10) - 2.5) + 'px';
   }
 
+     // if the slideprev function ends, it needs to restart
+
+  var clickNext = document.getElementById('next')
+  clickNext.onclick = function(){ 
+    timer = window.setInterval(slideNext, 50)
+  }
+
+  var clickPrev = document.getElementById('previous')
+    clickPrev.onclick = function(){
+      timer = window.setInterval(slidePrev, 50)
+    }
 </script>
 
 </body>

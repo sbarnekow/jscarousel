@@ -1,19 +1,20 @@
 .carousel {
-  border: 8px solid black;
+  border: 20px solid black;
   overflow: hidden;
   width: 635px;
-  height: 420px;
+  height: 410px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .slider {
   position: relative;
-  width: 3200px;
+  width: 2560px;
 }
 
 .slider img{
   float: left;
+  border: border: 20px solid black;
 }
 
 div {
